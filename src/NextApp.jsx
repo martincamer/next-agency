@@ -11,6 +11,7 @@ import {
 	Servicio,
 	ServicioSlug,
 } from './pages';
+import { ErrorPage } from './pages/ErrorPage';
 
 const router = createBrowserRouter([
 	{
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
 			{ path: '/servicio', element: <Servicio /> },
 			{ path: '/blog', element: <Blog /> },
 			{ path: '/blog/:slug', element: <BlogSlug /> },
+			{ path: '*', element: <ErrorPage /> },
 		],
 	},
 ]);
