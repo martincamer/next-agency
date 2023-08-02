@@ -95,7 +95,7 @@ export const Header = () => {
 						>
 							<span
 								className={`bg-black transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${
-									isOpen ? 'rotate-45 translate-y-[3px]' : '-translate-y-0.5'
+									isOpen ? 'rotate-45 translate-y-[5px]' : '-translate-y-0.5'
 								}`}
 							></span>
 							<span
@@ -105,7 +105,7 @@ export const Header = () => {
 							></span>
 							<span
 								className={`bg-black  transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm translate-y-0.5 ${
-									isOpen ? '-rotate-45 -translate-y-[5px]' : 'translate-y-0.5'
+									isOpen ? '-rotate-45 -translate-y-[2px]' : 'translate-y-0.5'
 								}`}
 							></span>
 						</button>
