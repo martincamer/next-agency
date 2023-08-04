@@ -1,11 +1,24 @@
-import { createContext } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 const UseContextNext = createContext();
 
-export const NextContextProvider = ({ children }) => {
+function NextContextProvider({ children }) {
+	const [loading, setLoading] = useState(false);
+
+	useEffect(() => {
+		setLoading(true);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	}, []);
+
 	return (
-		<UseContextNext.Provider value={{}}>{children}</UseContextNext.Provider>
+		<UseContextNext.Provider value={{ loading }}>
+			{children}
+		</UseContextNext.Provider>
 	);
-};
+}
+
+export { NextContextProvider };
 
 export default UseContextNext;

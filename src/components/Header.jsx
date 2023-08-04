@@ -11,7 +11,7 @@ export const Header = () => {
 
 	return (
 		<header className="sticky top-0 z-[1]">
-			<nav className="max-md:mb-2 max-md:border-b-[1px] max-md:border-black/20">
+			<nav className="max-md:border-b-[1px] max-md:border-black/20">
 				<div className="wrapper">
 					<div className="logo">
 						<Link
@@ -86,62 +86,74 @@ export const Header = () => {
 							</div>
 						</Link>
 					</ul>
-					<div>
-						<button
-							className={
-								'flex-col justify-center items-center hidden max-md:flex font-medium'
-							}
-							onClick={handleClick}
-						>
-							<span
-								className={`bg-black transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${
-									isOpen ? 'rotate-45 translate-y-[5px]' : '-translate-y-0.5'
-								}`}
-							></span>
-							<span
-								className={`bg-black  transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5 ${
-									isOpen ? 'opacity-0' : 'opacity-100'
-								}`}
-							></span>
-							<span
-								className={`bg-black  transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm translate-y-0.5 ${
-									isOpen ? '-rotate-45 -translate-y-[2px]' : 'translate-y-0.5'
-								}`}
-							></span>
-						</button>
+					<div
+						className="max-md:block hidden"
+						onClick={() => handleClick()}
+					>
+						{!isOpen ? (
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								className="w-8 h-8"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+								/>
+							</svg>
+						) : (
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								className="w-8 h-8"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg>
+						)}
 					</div>
 				</div>
 			</nav>
 			{isOpen ? (
 				<div
-					className={`fixed h-[50%] shadow-lg shadow-black/20 w-full p-12 bg-white transition-all duration-300 ease-in-out flex flex-col font-semibold text-lg text-center uppercase items-center justify-center`}
+					className={`h-full bg-terciary fixed  gap-12 text-white shadow-lg shadow-black/20 w-full p-12 flex flex-col font-semibold text-lg text-center capitalize duration-500 ease transition-all opacity-1`}
 				>
 					<Link
-						className="hover:bg-black px-4 py-2 rounded-xl hover:text-white transition-all ease-in-out duration-300"
+						className={`text-3xl hover:text-white transition-all ease-in-out duration-500`}
 						to={'/'}
 					>
 						Home
 					</Link>
 					<Link
-						className="hover:bg-black px-4 py-2 rounded-xl hover:text-white transition-all ease-in-out duration-300"
+						className="text-3xl hover:text-white transition-all ease-in-out duration-300"
 						to={'/proyectos'}
 					>
 						Proyectos
 					</Link>
 					<Link
-						className="hover:bg-black px-4 py-2 rounded-xl hover:text-white transition-all ease-in-out duration-300"
+						className="text-3xl hover:text-white transition-all ease-in-out duration-300"
 						to={'/procesos'}
 					>
 						Procesos
 					</Link>
 					<Link
-						className="hover:bg-black px-4 py-2 rounded-xl hover:text-white transition-all ease-in-out duration-300"
+						className="text-3xl hover:text-white transition-all ease-in-out duration-300"
 						to={'/blog'}
 					>
 						Blog
 					</Link>
 					<Link
-						className="hover:bg-black px-4 py-2 rounded-xl hover:text-white transition-all ease-in-out duration-300"
+						className="text-3xl hover:text-white transition-all ease-in-out duration-300"
 						to={'/contacto'}
 					>
 						Contacto
@@ -150,7 +162,7 @@ export const Header = () => {
 						className=" px-4 py-2 rounded-xl transition-all ease-in-out duration-300 group flex flex-col items-center relative"
 						to={'/servicio'}
 					>
-						<span className="flex items-center gap-2">
+						<span className="flex items-center gap-2 text-3xl">
 							Servicios
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -167,51 +179,51 @@ export const Header = () => {
 								/>
 							</svg>
 						</span>
-						<div className="hidden absolute top-[40px] group-hover:block bg-white p-4 rounded-lg shadow-md shadow-current w-[250px]">
-							<p className="font-semibold text-sm text-black pb-2">
+						<div className="hidden absolute h-[200px] top-[48px] group-hover:block bg-white p-4 rounded-lg w-[250px] overflow-y-scroll">
+							<p className="font-semibold text-black pb-2 text-lg">
 								Diseño UX/UI
 							</p>
-							<ul className="mega-links space-y-2 mb-4">
+							<ul className="mega-links space-y-3 mb-4">
 								<Link
-									className="text-sm text-gray-500"
+									className="text-sm text-gray-800 font-normal"
 									to={'/servicio/ux-research'}
 								>
 									- UX Research
 								</Link>
 								<Link
-									className="text-sm text-gray-500"
+									className="text-sm text-gray-800 font-normal"
 									to={'/servicio/ux-ui-design'}
 								>
 									- UI/UX Design
 								</Link>
 								<Link
-									className="text-sm text-gray-500"
+									className="text-sm text-gray-800 font-normal"
 									to={'/servicio/ux-review'}
 								>
 									- UX Review
 								</Link>
 							</ul>
-							<p className="font-semibold text-sm text-black pb-2">
+							<p className="font-semibold text-black pb-2 text-lg">
 								Diseño Web
 							</p>
-							<ul className="mega-links space-y-2">
+							<ul className="mega-links space-y-3">
 								<Link
-									className="text-sm text-gray-500"
+									className="text-sm text-gray-800 font-normal"
 									to={'/servicio/ux-research'}
 								>
-									- UX Research
+									- Landing Page
 								</Link>
 								<Link
-									className="text-sm text-gray-500"
+									className="text-sm text-gray-800 font-normal"
 									to={'/servicio/ux-ui-design'}
 								>
-									- UI/UX Design
+									- Tienda Online
 								</Link>
 								<Link
-									className="text-sm text-gray-500"
+									className="text-sm text-gray-800 font-normal"
 									to={'/servicio/ux-review'}
 								>
-									- UX Review
+									- Pagina Web Informativa
 								</Link>
 							</ul>
 						</div>
