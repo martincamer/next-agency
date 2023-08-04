@@ -124,114 +124,143 @@ export const Header = () => {
 					</div>
 				</div>
 			</nav>
-			{isOpen ? (
+			<div
+				className={`${
+					!isOpen
+						? 'hidden'
+						: 'min-h-full fixed top-0 bg-terciary gap-12 text-white shadow-lg shadow-black/20 w-full p-12 flex flex-col font-semibold text-lg text-center capitalize duration-500 ease transition-all opacity-1'
+				}  `}
+			>
 				<div
-					className={`h-full bg-terciary fixed  gap-12 text-white shadow-lg shadow-black/20 w-full p-12 flex flex-col font-semibold text-lg text-center capitalize duration-500 ease transition-all opacity-1`}
+					onClick={handleClick}
+					className="absolute top-0 right-0 p-4"
 				>
-					<Link
-						className={`text-3xl hover:text-white transition-all ease-in-out duration-500`}
-						to={'/'}
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={1.5}
+						stroke="currentColor"
+						className="w-8 h-8"
 					>
-						Home
-					</Link>
-					<Link
-						className="text-3xl hover:text-white transition-all ease-in-out duration-300"
-						to={'/proyectos'}
-					>
-						Proyectos
-					</Link>
-					<Link
-						className="text-3xl hover:text-white transition-all ease-in-out duration-300"
-						to={'/procesos'}
-					>
-						Procesos
-					</Link>
-					<Link
-						className="text-3xl hover:text-white transition-all ease-in-out duration-300"
-						to={'/blog'}
-					>
-						Blog
-					</Link>
-					<Link
-						className="text-3xl hover:text-white transition-all ease-in-out duration-300"
-						to={'/contacto'}
-					>
-						Contacto
-					</Link>
-					<Link
-						className=" px-4 py-2 rounded-xl transition-all ease-in-out duration-300 group flex flex-col items-center relative"
-						to={'/servicio'}
-					>
-						<span className="flex items-center gap-2 text-3xl">
-							Servicios
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth={1.5}
-								stroke="currentColor"
-								className="w-5 h-5"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-								/>
-							</svg>
-						</span>
-						<div className="hidden absolute h-[200px] top-[48px] group-hover:block bg-white p-4 rounded-lg w-[250px] overflow-y-scroll">
-							<p className="font-semibold text-black pb-2 text-lg">
-								Diseño UX/UI
-							</p>
-							<ul className="mega-links space-y-3 mb-4">
-								<Link
-									className="text-sm text-gray-800 font-normal"
-									to={'/servicio/ux-research'}
-								>
-									- UX Research
-								</Link>
-								<Link
-									className="text-sm text-gray-800 font-normal"
-									to={'/servicio/ux-ui-design'}
-								>
-									- UI/UX Design
-								</Link>
-								<Link
-									className="text-sm text-gray-800 font-normal"
-									to={'/servicio/ux-review'}
-								>
-									- UX Review
-								</Link>
-							</ul>
-							<p className="font-semibold text-black pb-2 text-lg">
-								Diseño Web
-							</p>
-							<ul className="mega-links space-y-3">
-								<Link
-									className="text-sm text-gray-800 font-normal"
-									to={'/servicio/ux-research'}
-								>
-									- Landing Page
-								</Link>
-								<Link
-									className="text-sm text-gray-800 font-normal"
-									to={'/servicio/ux-ui-design'}
-								>
-									- Tienda Online
-								</Link>
-								<Link
-									className="text-sm text-gray-800 font-normal"
-									to={'/servicio/ux-review'}
-								>
-									- Pagina Web Informativa
-								</Link>
-							</ul>
-						</div>
-					</Link>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
 				</div>
-			) : (
-				''
-			)}
+				<Link
+					className={`text-[23px] hover:text-white transition-all ease-in-out duration-500`}
+					to={'/'}
+					onClick={handleClick}
+				>
+					Home
+				</Link>
+				<Link
+					onClick={handleClick}
+					className="text-[23px] hover:text-white transition-all ease-in-out duration-300"
+					to={'/proyectos'}
+				>
+					Proyectos
+				</Link>
+				<Link
+					onClick={handleClick}
+					className="text-[23px] hover:text-white transition-all ease-in-out duration-300"
+					to={'/procesos'}
+				>
+					Procesos
+				</Link>
+				<Link
+					onClick={handleClick}
+					className="text-[23px] hover:text-white transition-all ease-in-out duration-300"
+					to={'/blog'}
+				>
+					Blog
+				</Link>
+				<Link
+					onClick={handleClick}
+					className="text-[23px] hover:text-white transition-all ease-in-out duration-300"
+					to={'/contacto'}
+				>
+					Contacto
+				</Link>
+				<Link
+					className=" px-4 py-2 rounded-xl transition-all ease-in-out duration-300 group flex flex-col items-center relative"
+					to={'/servicio'}
+					onClick={handleClick}
+				>
+					<span className="flex items-center gap-2 text-[23px]">
+						Servicios
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth={1.5}
+							stroke="currentColor"
+							className="w-5 h-5"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+							/>
+						</svg>
+					</span>
+					<div className="hidden absolute h-[200px] top-[48px] group-hover:block bg-white p-4 rounded-lg w-[250px] overflow-y-scroll">
+						<p className="font-semibold text-black pb-2 text-lg">
+							Diseño UX/UI
+						</p>
+						<ul className="mega-links space-y-3 mb-4">
+							<Link
+								onClick={handleClick}
+								className="text-sm text-gray-800 font-normal"
+								to={'/servicio/ux-research'}
+							>
+								- UX Research
+							</Link>
+							<Link
+								onClick={handleClick}
+								className="text-sm text-gray-800 font-normal"
+								to={'/servicio/ux-ui-design'}
+							>
+								- UI/UX Design
+							</Link>
+							<Link
+								onClick={handleClick}
+								className="text-sm text-gray-800 font-normal"
+								to={'/servicio/ux-review'}
+							>
+								- UX Review
+							</Link>
+						</ul>
+						<p className="font-semibold text-black pb-2 text-lg">Diseño Web</p>
+						<ul className="mega-links space-y-3">
+							<Link
+								onClick={handleClick}
+								className="text-sm text-gray-800 font-normal"
+								to={'/servicio/ux-research'}
+							>
+								- Landing Page
+							</Link>
+							<Link
+								onClick={handleClick}
+								className="text-sm text-gray-800 font-normal"
+								to={'/servicio/ux-ui-design'}
+							>
+								- Tienda Online
+							</Link>
+							<Link
+								onClick={handleClick}
+								className="text-sm text-gray-800 font-normal"
+								to={'/servicio/ux-review'}
+							>
+								- Pagina Web Informativa
+							</Link>
+						</ul>
+					</div>
+				</Link>
+			</div>
 		</header>
 	);
 };
