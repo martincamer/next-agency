@@ -239,21 +239,21 @@ export const Header = () => {
 							<Link
 								onClick={handleClick}
 								className="text-sm text-gray-800 font-normal"
-								to={'/servicio/ux-research'}
+								to={'/servicio/landing-page'}
 							>
 								- Landing Page
 							</Link>
 							<Link
 								onClick={handleClick}
 								className="text-sm text-gray-800 font-normal"
-								to={'/servicio/ux-ui-design'}
+								to={'/servicio/tienda-online'}
 							>
 								- Tienda Online
 							</Link>
 							<Link
 								onClick={handleClick}
 								className="text-sm text-gray-800 font-normal"
-								to={'/servicio/ux-review'}
+								to={'/servicio/pagina-web-informativa'}
 							>
 								- Pagina Web Informativa
 							</Link>
