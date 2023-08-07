@@ -19,10 +19,12 @@ export const ProyectosSlug = () => {
 					alt=""
 				/>
 			))} */}
-			<div className="py-[150px] flex flex-col gap-28">
+			<div className="py-[150px] max-md:py-[60px] flex flex-col gap-28 max-md:gap-12">
 				<div className="space-y-4">
 					<p className="text-xs font-medium text-gray-800">NUESTRO TRABAJO</p>
-					<h2 className="text-[40px] font-medium">{work?.titulo}.</h2>
+					<h2 className="text-[40px] font-medium max-md:text-[25px]">
+						{work?.titulo}.
+					</h2>
 				</div>
 
 				<div className="space-y-10">
@@ -52,11 +54,13 @@ export const ProyectosSlug = () => {
 					/>
 				</div>
 
-				<div className="grid grid-cols-2 items-center justify-center mx-auto gap-20">
+				<div className="grid grid-cols-2 items-center justify-center mx-auto gap-20 max-md:flex max-md:flex-col max-md:gap-12">
 					<div className="space-y-6">
 						<div>
-							<p className="font-semibold text-5xl mb-5">TIPOGRAFIA</p>
-							<span className="text-3xl font-medium">
+							<p className="font-semibold text-5xl mb-5 max-md:text-[25px]">
+								TIPOGRAFIA
+							</p>
+							<span className="text-3xl font-medium max-md:text-2xl">
 								{work?.tipografia_uno}
 							</span>
 						</div>
@@ -67,7 +71,7 @@ export const ProyectosSlug = () => {
 					</div>
 					<div>
 						<img
-							className="w-[400px] h-[400px] object-cover"
+							className="w-[400px] h-[400px] max-md:w-full max-md:h-full object-cover mx-auto"
 							src="https://www.brumalab.com.co/wp-content/uploads/2023/04/Frame-2.png"
 							alt=""
 						/>

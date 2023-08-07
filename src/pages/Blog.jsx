@@ -11,7 +11,7 @@ export const Blog = () => {
 					Ultimos blog subidos.
 				</h4>
 			</div>
-			<div className="grid grid-cols-2 gap-10">
+			<div className="grid grid-cols-2 gap-10 max-md:grid-cols-1">
 				{blog.map(b => (
 					<Link
 						to={`/blog/${b.slug}`}
@@ -43,7 +43,7 @@ export const Blog = () => {
 				</Button>
 				<Button
 					style={
-						'bg-white border-[1px] border-black text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300 ease max-md:text-[12px]'
+						'bg-gradient-to-r from-[#FFADBC]/60 to-[#FFBF00]/50 hover:from-white border-[1px] border-black text-black transition-all duration-300 ease-in-out max-md:text-[12px]'
 					}
 				>
 					Agendar una cita

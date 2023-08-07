@@ -10,7 +10,7 @@ export const Header = () => {
 	};
 
 	return (
-		<header className="sticky top-0 z-[1]">
+		<header className="sticky top-0 z-50">
 			<nav className="max-md:border-b-[1px] max-md:border-black/20">
 				<div className="wrapper">
 					<div className="logo">
@@ -72,16 +72,6 @@ export const Header = () => {
 											</Link>
 										</ul>
 									</div>
-									<div className="main">
-										<p className="font-semibold text-base text-black">
-											Diseño UX/UI
-										</p>
-										<ul className="mega-links">
-											<Link to={'/servicio/ux-research'}>UX Research</Link>
-											<Link to={'/servicio/ux-ui-design'}>UI/UX Design</Link>
-											<Link to={'/servicio/ux-review'}>UX Review</Link>
-										</ul>
-									</div>
 								</div>
 							</div>
 						</Link>
@@ -133,7 +123,7 @@ export const Header = () => {
 			>
 				<div
 					onClick={handleClick}
-					className="absolute top-0 right-0 p-4"
+					className="absolute top-0 right-0 p-4 cursor-pointer"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -207,33 +197,7 @@ export const Header = () => {
 							/>
 						</svg>
 					</span>
-					<div className="hidden absolute h-[200px] top-[48px] group-hover:block bg-white p-4 rounded-lg w-[250px] overflow-y-scroll">
-						<p className="font-semibold text-black pb-2 text-lg">
-							Diseño UX/UI
-						</p>
-						<ul className="mega-links space-y-3 mb-4">
-							<Link
-								onClick={handleClick}
-								className="text-sm text-gray-800 font-normal"
-								to={'/servicio/ux-research'}
-							>
-								- UX Research
-							</Link>
-							<Link
-								onClick={handleClick}
-								className="text-sm text-gray-800 font-normal"
-								to={'/servicio/ux-ui-design'}
-							>
-								- UI/UX Design
-							</Link>
-							<Link
-								onClick={handleClick}
-								className="text-sm text-gray-800 font-normal"
-								to={'/servicio/ux-review'}
-							>
-								- UX Review
-							</Link>
-						</ul>
+					<div className="hidden absolute top-[40px] group-hover:block bg-white p-4 rounded-lg w-[250px]">
 						<p className="font-semibold text-black pb-2 text-lg">Diseño Web</p>
 						<ul className="mega-links space-y-3">
 							<Link

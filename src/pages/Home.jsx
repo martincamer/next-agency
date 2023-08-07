@@ -23,6 +23,11 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import persona from './../../public/assets/img/persona.webp';
 import { useContext } from 'react';
 import UseContextNext from '../context/NextContext';
+import {
+	MouseParallaxContainer,
+	MouseParallaxChild,
+} from 'react-parallax-mouse';
+import gif from '../../public/assets/img/gif.gif';
 
 export const Home = () => {
 	const { loading } = useContext(UseContextNext);
@@ -33,17 +38,71 @@ export const Home = () => {
 				<Loading />
 			) : (
 				<>
-					<Container width={'w-[1220px]'}>
-						<div className="py-[150px] max-md:py-[80px] flex flex-col justify-center items-center">
-							<div className="w-[80%] mx-auto max-md:w-full">
-								<h2 className="font-extrabold text-[38px] max-md:text-[25px] max-md:text-justify text-center">
+					<Container width={'bg-gradient-to-r from-[#FFADBC] to-[#FFBF00]/40'}>
+						<div className="max-md:absolute max-md:top-0 max-md:left-0 absolute max-md:z-0 top-40 left-0 w-full max-w-full">
+							<MouseParallaxContainer
+								globalFactorX={0.1}
+								globalFactorY={0.1}
+							>
+								<div className="flex gap-10 h-[100vh] relativew-full max-md:block">
+									<MouseParallaxChild
+										factorX={1}
+										factorY={1}
+									>
+										<div className="bg-white/30 h-[300px] w-[300px] rounded-full" />
+									</MouseParallaxChild>
+									<MouseParallaxChild
+										factorX={0.5}
+										factorY={0 - 5}
+									>
+										<div className="bg-white/30 h-[120px] w-[120px] rounded-full absolute top-[100px] max-md:left-0 max-md:top-0" />
+									</MouseParallaxChild>
+									<MouseParallaxChild
+										factorX={0.5}
+										factorY={0 - 5}
+									>
+										<div className="bg-white/30 h-[300px] w-[300px] rounded-full absolute left-[800px] max-md:left-0 max-md:top-0" />
+									</MouseParallaxChild>
+								</div>
+							</MouseParallaxContainer>
+						</div>
+						{/* <div className="max-md:absolute max-md:top-0 max-md:left-0 absolute max-md:z-0 top-[130px] left-[330px]">
+							<MouseParallaxContainer
+								globalFactorX={0.1}
+								globalFactorY={0.1}
+							>
+								<MouseParallaxChild
+									factorX={0.3}
+									factorY={0.5}
+								>
+									<div className="bg-white/30 h-[120px] w-[120px] rounded-full" />
+								</MouseParallaxChild>
+							</MouseParallaxContainer>
+						</div>
+						<div className="max-md:absolute max-md:top-0 max-md:left-0 absolute max-md:z-0 top-[400px] left-[300px]">
+							<MouseParallaxContainer
+								globalFactorX={0.1}
+								globalFactorY={0.1}
+							>
+								<MouseParallaxChild
+									factorX={0.5}
+									factorY={0.5}
+								>
+									<div className="bg-white/30 h-[200px] w-[200px] rounded-full" />
+								</MouseParallaxChild>
+							</MouseParallaxContainer>
+						</div> */}
+
+						<div className="w-[1220px] max-w-full mx-auto py-[150px] max-md:py-[80px] flex flex-col justify-center items-center">
+							<div className="w-[80%] mx-auto max-md:w-full z-10">
+								<h2 className="font-extrabold text-[38px] max-md:text-[25px] max-md:text-justify text-center max-md:text-black text-white">
 									Conectamos tu marca con el mundo{' '}
-									<span className="font-medium">
+									<span className="font-medium text-black">
 										A tiempo. Dentro del presupuesto. A punto.
 									</span>
 								</h2>
 								<div className="mt-5 flex justify-center">
-									<p className="text-xl max-md:text-base font-medium max-md:text-center">
+									<p className="text-xl max-md:text-base font-medium max-md:text-center text-[#3B3B3B]">
 										Diseño web - Tiendas online - Diseño UX/UI
 									</p>
 								</div>
@@ -53,7 +112,7 @@ export const Home = () => {
 										<p className="text-center font-semibold text-xl mb-2 max-md:text-base">
 											90%
 										</p>
-										<span className="text-base text-gray-700 max-md:text-base">
+										<span className="text-base text-[#3B3B3B] max-md:text-base">
 											de nuestros colaboradores son expertos UX
 										</span>
 									</li>
@@ -61,7 +120,7 @@ export const Home = () => {
 										<p className="text-center font-semibold text-xl mb-2 max-md:text-base">
 											1 década
 										</p>
-										<span className="text-base text-gray-700 max-md:text-base">
+										<span className="text-base text-[#3B3B3B] max-md:text-base">
 											de experiencia en el sector digital
 										</span>
 									</li>
@@ -69,7 +128,7 @@ export const Home = () => {
 										<p className="text-center font-semibold text-xl mb-2 max-md:text-base">
 											100%
 										</p>
-										<span className="text-base text-gray-700 max-md:text-base">
+										<span className="text-base text-[#3B3B3B] max-md:text-base">
 											de nuestro trabajo se realiza con design thinking
 										</span>
 									</li>
@@ -77,13 +136,11 @@ export const Home = () => {
 							</div>
 						</div>
 					</Container>
-					<Container width={'w-[1220px]'}>
-						<div className="w-full h-full">
+					<Container width={'bg-gradient-to-r from-[#FFADBC] to-[#FFBF00]/40'}>
+						<div className=" w-[1220px] mx-auto max-w-full h-full">
 							<img
 								className="w-full h-full object-cover"
-								src={
-									'https://www.brumalab.com.co/wp-content/uploads/2023/04/Diseno-sin-titulo.gif'
-								}
+								src={gif}
 								alt=""
 							/>
 						</div>

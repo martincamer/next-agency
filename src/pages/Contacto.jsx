@@ -10,7 +10,7 @@ export const Contacto = () => {
 				</h4>
 			</div>
 
-			<form className="bg-six p-20 space-y-6 max-md:p-6">
+			<form className="bg-gradient-to-r from-[#FFADBC]/60 to-[#FFBF00]/50 p-20 rounded-lg shadow-lg shadow-black/20 space-y-6 max-md:p-6">
 				<div className="flex gap-10 w-full max-md:flex-col">
 					<div className="flex flex-col space-y-2 w-full">
 						<label

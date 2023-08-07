@@ -17,7 +17,7 @@ export const Proyectos = () => {
 					</h4>
 				</div>
 
-				<div className="grid grid-cols-2 gap-10 max-md:gap-4 max-md:px-2">
+				<div className="grid grid-cols-2 max-md:grid-cols-1 gap-10 max-md:gap-10 max-md:px-2">
 					{proyectos.map(p => (
 						<Link to={`/proyectos/${p.slug}`}>
 							<img
@@ -44,14 +44,14 @@ export const Proyectos = () => {
 					<div className="mt-9 flex gap-3">
 						<Button
 							style={
-								'bg-terciary text-white hover:bg-white hover:border-[1px] hover:text-black hover:border-black transition-all duration-300 ease max-md:text-[12px]'
+								'bg-terciary text-white hover:bg-white hover:border-[1px] hover:text-black hover:border-black transition-all duration-300 ease max-md:text-[12px] max-md:py-[10px] flex items-center'
 							}
 						>
 							Contacto
 						</Button>
 						<Button
 							style={
-								'bg-white border-[1px] border-black text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300 ease max-md:text-[12px]'
+								'bg-white border-[1px] border-black text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300 ease max-md:text-[12px] max-md:py-[10px]'
 							}
 						>
 							Agendar una cita
