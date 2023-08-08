@@ -173,10 +173,10 @@ export const Home = () => {
 					</Container>
 					<Container
 						width={
-							'bg-gradient-to-r from-[#FFADBC] to-[#FFBF00]/40 max-md:px-0'
+							'bg-gradient-to-r from-[#FFADBC] to-[#FFBF00]/40 max-md:px-0 max-sm:px-0'
 						}
 					>
-						<div className=" w-[1220px] max-md:w-full mx-auto max-w-full h-full">
+						<div className=" w-[1220px] max-md:w-full mx-auto max-w-full h-full max-md:px-0">
 							<img
 								className="w-full h-full object-cover"
 								src={gif}
