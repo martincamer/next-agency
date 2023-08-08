@@ -35,7 +35,7 @@ nav {
 .mega-box {
 	position: absolute;
 	right: 0;
-	width: 323px;
+	width: auto;
 	padding: 0 30px;
 	top: 100px;
 	opacity: 0;
